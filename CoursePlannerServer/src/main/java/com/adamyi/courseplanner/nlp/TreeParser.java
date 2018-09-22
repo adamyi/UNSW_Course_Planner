@@ -1,5 +1,7 @@
 package com.adamyi.courseplanner.nlp;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
@@ -210,5 +212,39 @@ public class TreeParser {
                 mTree.deleteNodeByIndex(i);
             }
         }
+    }
+
+    private void setSubTreeRequisite(int nodeId, ParseTree.Requisite requisite) {
+        mTree.setNodeRequisiteById(nodeId, requisite);
+        if (mTree.getNodeById(nodeId).getChildrenIds() != null) {
+            for (int childId : mTree.getNodeById(nodeId).getChildrenIds()) {
+                setSubTreeRequisite(childId, requisite);
+            }
+        }
+
+    }
+
+
+    public void analyzeRequisite(int nodeId) {
+        if (mTree.getNodeById(nodeId).getChildrenIds() != null) {
+            for (int childId : mTree.getNodeById(nodeId).getChildrenIds()) {
+                analyzeRequisite(childId);
+                if (StringUtils.equalsIgnoreCase(mTree.getNodeById(childId).getWord(), "prerequisite") ||
+                        StringUtils.equalsIgnoreCase(mTree.getNodeById(childId).getWord(), "pre-requisite")) {
+                    setSubTreeRequisite(childId, ParseTree.Requisite.PRE);
+
+                } else if (StringUtils.equalsIgnoreCase(mTree.getNodeById(childId).getWord(), "corequisite") ||
+                        StringUtils.equalsIgnoreCase(mTree.getNodeById(childId).getWord(), "co-requisite")) {
+                    setSubTreeRequisite(childId, ParseTree.Requisite.CO);
+                }
+            }
+        }
+
+    }
+    public void analyzeCourses() {
+
+    }
+    public void reduceTree() {
+
     }
 }

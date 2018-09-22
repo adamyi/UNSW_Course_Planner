@@ -2,48 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdbe74b5-de78-40ee-8036-1b5c1b7ff020" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.8/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/exploded-CoursePlannerServer/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/exploded-CoursePlannerServer/WEB-INF/appengine-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ArrayUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArrayTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -84,14 +43,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="213" />
-          <entry key="java" value="912" />
+          <entry key="java" value="1304" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="213" />
-          <entry key="JAVA" value="912" />
+          <entry key="JAVA" value="1304" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -129,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+            <state relative-caret-position="115">
+              <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="106" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1868#1869#0" expanded="true" />
@@ -146,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7235">
-              <caret line="498" column="25" lean-forward="true" selection-start-line="498" selection-start-column="25" selection-end-line="498" selection-end-column="25" />
+            <state relative-caret-position="3930">
+              <caret line="262" lean-forward="true" selection-start-line="262" selection-end-line="262" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#259#326#0" expanded="true" />
@@ -233,11 +192,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="28" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="473">
+              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#474#475#0" expanded="true" />
@@ -354,9 +313,11 @@
       <find>merge</find>
       <find>Relation</find>
       <find>Tag</find>
-      <find>getTag</find>
-      <find>getTree</find>
       <find>TreeParser</find>
+      <find>getTree</find>
+      <find>getTag</find>
+      <find>doReduce</find>
+      <find>set</find>
     </findStrings>
     <replaceStrings>
       <replace>HashMap</replace>
@@ -751,11 +712,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" />
       </list>
     </option>
   </component>
@@ -852,7 +813,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537592263860" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537592858606" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -886,15 +847,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537584810391</updated>
-      <workItem from="1537584811883" duration="6158000" />
+      <workItem from="1537584811883" duration="6752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6158000" />
+    <option name="totallyTimeSpent" value="6752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -902,9 +864,9 @@
       <window_info id="Web" sideWeight="0.50164473" side_tool="true" visible="true" weight="0.20695971" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.20695971" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.20695971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.37959182" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.37959182" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.315508" />
       <window_info anchor="bottom" id="Java Enterprise" />
@@ -1011,6 +973,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="103" column="32" lean-forward="true" selection-start-line="103" selection-start-column="32" selection-end-line="106" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3849">
@@ -1032,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7235">
-          <caret line="498" column="25" lean-forward="true" selection-start-line="498" selection-start-column="25" selection-end-line="498" selection-end-column="25" />
+        <state relative-caret-position="3930">
+          <caret line="262" lean-forward="true" selection-start-line="262" selection-end-line="262" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#259#326#0" expanded="true" />
@@ -1120,26 +1094,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="473">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#474#475#0" expanded="true" />
             <element signature="e#502#503#0" expanded="true" />
             <element signature="e#543#544#0" expanded="true" />
             <element signature="e#571#572#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="123" column="31" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
           </folding>
         </state>
       </provider>
