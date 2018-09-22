@@ -224,8 +224,11 @@ public class TreeParser {
 
     }
 
+    public void analyzeRequisite() {
+        analyzeRequisite(mTree.getRootId());
+    }
 
-    public void analyzeRequisite(int nodeId) {
+    private void analyzeRequisite(int nodeId) {
         if (mTree.getNodeById(nodeId).getChildrenIds() != null) {
             for (int childId : mTree.getNodeById(nodeId).getChildrenIds()) {
                 analyzeRequisite(childId);
@@ -244,6 +247,7 @@ public class TreeParser {
     public void analyzeCourses() {
 
     }
+
     public void reduceTree() {
 
     }

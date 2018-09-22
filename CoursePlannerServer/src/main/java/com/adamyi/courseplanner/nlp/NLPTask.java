@@ -65,6 +65,7 @@ public class NLPTask {
         mCredential = new GoogleCredential().setAccessToken(getAccessToken());
         try {
             Log.info("CurrentMessage " + mMessage);
+            preprocessMessage();
             buildTree();
 
         } catch (Exception e) {
@@ -72,9 +73,16 @@ public class NLPTask {
         }
     }
 
-    /**
-     *
-     */
+    private void preprocessMessage() {
+        mMessage.replaceAll("[pP]rogram \\d{4}", "PRGM$1");
+        mMessage.replaceAll("Bachelor of Science", "BS");
+        mMessage.replaceAll("BS \\(Honours\\)", "BSH");
+        mMessage.replaceAll("BS \\(Hon\\)", "BSH");
+        mMessage.replaceAll("Bachelor of Engineering", "BE");
+        mMessage.replaceAll("BE \\(Honours\\)", "BEH");
+        mMessage.replaceAll("BE \\(Hon\\)", "BEH");
+    }
+
     private void buildTree() {
         try {
 
