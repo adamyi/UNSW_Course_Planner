@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>UNSW Course Planner</title>
+    <script type="text/javascript" src="/static/vis.min.js"></script>
+    <link href="/static/vis.min.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <style type="text/css" media="screen">
+        .autocomplete-suggestions { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; background: #FFF; cursor: default; overflow: auto; -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); }
+        .autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+        .autocomplete-no-suggestion { padding: 2px 5px;}
+        .autocomplete-selected { background: #F0F0F0; }
+        .autocomplete-suggestions strong { font-weight: bold; color: #000; }
+        .autocomplete-group { padding: 2px 5px; font-weight: bold; font-size: 16px; color: #000; display: block; border-bottom: 1px solid #000; }
+    </style>
+</head>
+<body style="height:800px">
+    <nav class="navbar navbar-dark bg-dark">
+        <a style="color:aliceblue" class="navbar-brand">UNSW Course Planner</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" id="course-input" style="width:500px" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="add-btn" type="button">Add course</button>
+        </form>
+      </nav>
+      
+    <div id="mynetwork"></div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/jquery-3.3.1.min.js"></script>
+    <script src="/static/jquery.autocomplete.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var id = 0;
+        // create an array with nodes
+        var nodes = new vis.DataSet([]);
+
+        // create an array with edges
+        var edges = new vis.DataSet([]);
+
+        var addCourse;
+        var getPreReqs;
+        var data;
+        var lookup = [];
+
+        fetch('/static/courses.json')
+            .then(res => res.json())
+            .then(function(courses){
+                data = courses;
+                getPreReqs = function(code) {
+                    course = courses[code];
+                    if('enrol_conditions' in course){
+                        let re = /[A-Z]{4}\d{4}/g;
+                        let matches = course.enrol_conditions.match(re);
+                        return matches == null ? [] : matches.filter(code => code in courses);
+                    }
+                    return [];
+                }
+
+                function addCourseNode(code){
+                    course = courses[code];
+                    if(nodes.get(code) == null){
+                        let node = {};
+                        node.id = code;
+                        node.label = '<b>' + code + '</b>' + '\n' + course.name;
+                        node.shape = 'box';
+                        node.font = {color: 'aliceblue', multi: 'html'}
+                        if('enrol_conditions' in course){
+                            node.title = course.enrol_conditions;
+                            node.group = 'default';
+                        }
+                        else {
+                            node.title = 'No prerequisite';
+                            node.group = 'no_prereq';
+                        }
+
+                        if('URL_MAP_FOR_CONTENT' in course)
+                            node.URL = 'https://www.handbook.unsw.edu.au' + 
+                                course.URL_MAP_FOR_CONTENT;
+                        nodes.add(node);
+                    }
+                }
+
+                function addEdge(from, to){
+                    edges.add({from: from, to: to, arrows: 'to', color: '#000'}); 
+                }
+
+                addCourse = function(coursecode){
+                    if(!(coursecode in courses)) return;
+                    addCourseNode(coursecode);
+                    currLvl = [coursecode]
+                    while(currLvl.length > 0){
+                        var nextLvl = [];
+                        for(i in currLvl){
+                            let course = currLvl[i];
+                            thisPreReqs = getPreReqs(course);
+                            thisPreReqs.forEach(e => {
+                                addCourseNode(e);
+                                addEdge(e, course);
+                            });
+                            nextLvl = nextLvl.concat(thisPreReqs);
+                        }
+                        currLvl = nextLvl;
+                    }
+                }
+                for(course in courses) {
+                    lookup.push({
+                        value: course + ' - ' + courses[course].name,
+                        data: course
+                    })
+                }
+                $('#course-input').autocomplete({
+					serviceUrl: '/api/query',
+                    autoSelectFirst: true,
+                    <!-- onSelect: function (suggestion){ -->
+                    <!--     this.value = suggestion.data; -->
+                    <!-- } -->
+                })
+            })
+
+        // create a network
+        var container = document.getElementById('mynetwork');
+
+        // provide the graph in the vis format
+        var graph = {
+            nodes: nodes,
+            edges: edges
+        };
+
+        var options = {
+            "edges": {
+              "smooth": false
+            },
+            "physics": {
+              "enabled": false,
+            },
+            layout: {
+                hierarchical: {
+                    direction: "UD",
+                    sortMethod: "directed",
+                    nodeSpacing: 300
+                }
+            },
+            groups: {
+                no_prereq: {
+                    color: 'MediumSeaGreen'
+                },
+                default: {
+                    color: 'DodgerBlue'
+                }
+            },
+            interaction: {
+                hover: true,
+            }
+        }
+
+        // initialize your network!
+        var network = new vis.Network(container, graph, options);
+
+        network.on("doubleClick", function (params) {
+            params.event = "[original event]";
+            if(params.nodes.length > 0){
+                let node = nodes.get(params.nodes[0]);
+                if('URL' in node)
+                    window.open(node.URL, '_blank');
+                else
+                    alert('No handbook url for this course');
+            }
+        });
+
+        $('#add-btn').click(function(){
+            let code = document.getElementById('course-input').value.split(' - ');
+            addCourse(code[0]);
+            document.getElementById('course-input').value = '';
+        })
+        $('#course-input').keypress(function (e) {
+          if (e.which == 13) {
+            e.preventDefault();
+            $('#add-btn').click();
+            
+            return false;    //<---- Add this line
+          }
+        });
+    </script>
+</body>
+</html>
