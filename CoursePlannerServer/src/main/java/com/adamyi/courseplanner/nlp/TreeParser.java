@@ -5,10 +5,13 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.logging.Logger;
 
 import static com.adamyi.courseplanner.nlp.ParseTree.NOT_EXIST;
 
 public class TreeParser {
+    private static final Logger Log = Logger.getLogger(TreeParser.class.getName());
+
     private ParseTree mTree;
 
     public ParseTree getTree() {
@@ -244,7 +247,77 @@ public class TreeParser {
         }
 
     }
+
     public void analyzeCourses() {
+        for (int i = 0; i < mTree.getNodeList().size(); i++) {
+            ParseTree.Node node = mTree.getNodeByIndex(i);
+            if (node.getWord().matches("[A-Z]{4}\\d{4}")) { // is a course
+                switch (node.getRelation()) {
+                    case "POBJ":
+                        int pid = node.getParentId();
+                        ParseTree.Node psbj = mTree.getNodeById(mTree.getNodeById(pid).getParentId());
+                        if (psbj.isRoot()) {
+                            //psbj.getChildrenIds().remove(node.getParentId());
+                            mTree.changeRoot(node.getId());
+                            node.setRelation(ParseTree.DEP_ROOT);
+                            psbj.setRelation("PROPERTY");
+                        } else {
+                            ParseTree.Node psbjFather = mTree.getNodeById(psbj.getParentId());
+                            psbjFather.getChildrenIds().remove(psbj.getId());
+                            psbjFather.addChildrenId(node.getId());
+                            node.setParentId(psbjFather.getId());
+                        }
+                        psbj.getChildrenIds().remove(pid);
+                        node.addChildrenId(psbj.getId());
+                        psbj.setParentId(node.getId());
+                        break;
+                    case ParseTree.DEP_CONJUNCTION:
+                        ParseTree.Node father = mTree.getNodeById(node.getParentId());
+                        int max_id = -1;
+                        for (int n: father.getChildrenIds()) {
+                            if (n > max_id && n < node.getId() && mTree.getNodeById(n).getRelation().equals(ParseTree.DEP_COORDINATING_CONJUNCTION)) {
+                                Log.info("[DEBUG] id: " + n + " word: " + mTree.getNodeById(n).getWord());
+                                max_id = n;
+                            }
+                        }
+                        if (max_id == -1) {
+                            Log.info("ERROR: CC not found...");
+                            node.setRelation("AND");
+                        } else {
+                            if (mTree.getNodeById(max_id).getWord().equalsIgnoreCase("or"))
+                                node.setRelation("OR");
+                            else
+                                node.setRelation("AND");
+                        }
+                        break;
+                    case ParseTree.DEP_UNKNOWN:
+                        ParseTree.Node parent = mTree.getNodeById(node.getParentId());
+                        int min_id = 99999;
+                        for (int n: parent.getChildrenIds()) {
+                            if (n < min_id && n > node.getId() && mTree.getNodeById(n).getRelation().equals(ParseTree.DEP_COORDINATING_CONJUNCTION)) {
+                                min_id = n;
+                            }
+                        }
+                        if (min_id == 99999) {
+                            Log.info("ERROR: CC not found...");
+                            node.setRelation("AND");
+                        } else {
+                            if (mTree.getNodeById(min_id).getWord().equalsIgnoreCase("or"))
+                                node.setRelation("OR");
+                            else
+                                node.setRelation("AND");
+                        }
+                        break;
+                    case ParseTree.DEP_ROOT:
+                        break;
+                    default:
+                        node.setRelation("AND");
+                        Log.info("Unknown DEP: " + node.getRelation() + ", using AND");
+
+                }
+            }
+        }
+
 
     }
 

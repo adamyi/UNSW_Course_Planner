@@ -74,13 +74,13 @@ public class NLPTask {
     }
 
     private void preprocessMessage() {
-        mMessage.replaceAll("[pP]rogram \\d{4}", "PRGM$1");
-        mMessage.replaceAll("Bachelor of Science", "BS");
-        mMessage.replaceAll("BS \\(Honours\\)", "BSH");
-        mMessage.replaceAll("BS \\(Hon\\)", "BSH");
-        mMessage.replaceAll("Bachelor of Engineering", "BE");
-        mMessage.replaceAll("BE \\(Honours\\)", "BEH");
-        mMessage.replaceAll("BE \\(Hon\\)", "BEH");
+        mMessage = mMessage.replaceAll("[pP]rogram (\\d{4})", "PRGM$1")
+                .replaceAll("Bachelor of Science", "BS")
+                .replaceAll("BS \\(Honours\\)", "BSH")
+                .replaceAll("BS \\(Hon\\)", "BSH")
+                .replaceAll("Bachelor of Engineering", "BE")
+                .replaceAll("BE \\(Honours\\)", "BEH")
+                .replaceAll("BE \\(Hon\\)", "BEH");
     }
 
     private void buildTree() {
@@ -111,11 +111,12 @@ public class NLPTask {
 
         //TODO: implement these.
         tp.analyzeRequisite();
+        Log.info("Before analysis: Tree " + mParseTree.toString());
         tp.analyzeCourses();
         tp.reduceTree();
 
         mParseTree = tp.getTree();
-        Log.info("Tree " + mParseTree.toString());
+        Log.info("After analysis: Tree " + mParseTree.toString());
     }
 
     /**

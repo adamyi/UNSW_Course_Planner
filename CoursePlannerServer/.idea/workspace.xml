@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdbe74b5-de78-40ee-8036-1b5c1b7ff020" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -45,14 +46,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="213" />
-          <entry key="java" value="1541" />
+          <entry key="java" value="3355" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="213" />
-          <entry key="JAVA" value="1541" />
+          <entry key="JAVA" value="3355" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -78,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
+            <state relative-caret-position="228">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
-              <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+            <state relative-caret-position="528">
+              <caret line="106" column="47" lean-forward="true" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1868#1869#0" expanded="true" />
@@ -107,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="478" column="47" lean-forward="true" selection-start-line="478" selection-start-column="47" selection-end-line="478" selection-end-column="47" />
+            <state relative-caret-position="145">
+              <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#259#326#0" expanded="true" />
@@ -197,8 +198,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="249" selection-start-line="249" selection-end-line="249" />
+            <state relative-caret-position="145">
+              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#474#475#0" expanded="true" />
@@ -215,8 +216,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2563">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="145">
+              <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1334#1414#0" expanded="true" />
@@ -236,7 +237,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArrayTypeAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="-129">
               <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -297,33 +298,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>StringUtils</find>
-      <find>flexible</find>
-      <find>Thread</find>
-      <find>log</find>
-      <find>Log.e</find>
-      <find>commons</find>
-      <find>SparseArray</find>
-      <find>TextUtils</find>
-      <find>mRelation</find>
-      <find>getRoot()</find>
-      <find>Node</find>
-      <find>toString</find>
-      <find>Flag.NORMAL</find>
-      <find>Flag.</find>
-      <find>getAccess</find>
-      <find>Flag</find>
-      <find>Tags</find>
-      <find>merge</find>
-      <find>Relation</find>
-      <find>Tag</find>
-      <find>TreeParser</find>
-      <find>getTree</find>
-      <find>getTag</find>
-      <find>constructTree</find>
-      <find>buildTree</find>
       <find>set</find>
-      <find>doReduce</find>
+      <find>for (</find>
+      <find>DEP</find>
+      <find>log</find>
+      <find>AND</find>
+      <find>OR&quot;</find>
+      <find>deleteNodeByIndex</find>
+      <find>remove</find>
+      <find>for</find>
+      <find>remove(</find>
+      <find>setPa</find>
+      <find>analyzeCourses</find>
+      <find>Tree</find>
+      <find>isRoot</find>
+      <find>stringutils</find>
+      <find>==</find>
+      <find>CC&quot;</find>
+      <find>print</find>
+      <find>getRoot(</find>
+      <find>getRoot</find>
+      <find>changeRoot</find>
+      <find>POBJ</find>
+      <find>pre-requi</find>
+      <find>pre-re</find>
+      <find>ROOT</find>
+      <find>TextUtils</find>
+      <find>PRGM</find>
+      <find>run(</find>
+      <find>enrolled</find>
+      <find>enroll</find>
     </findStrings>
     <replaceStrings>
       <replace>HashMap</replace>
@@ -715,14 +719,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ArrayUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArrayTypeAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArray.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java" />
       </list>
     </option>
   </component>
@@ -819,7 +823,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537593632570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537600198144" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -853,12 +857,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537584810391</updated>
-      <workItem from="1537584811883" duration="7471000" />
+      <workItem from="1537584811883" duration="13960000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7471000" />
+    <option name="totallyTimeSpent" value="13960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -867,12 +871,12 @@
       <window_info id="Designer" />
       <window_info id="Image Layers" />
       <window_info id="UI Designer" />
-      <window_info id="Web" sideWeight="0.50164473" side_tool="true" visible="true" weight="0.20695971" />
+      <window_info id="Web" sideWeight="0.5019608" side_tool="true" visible="true" weight="0.20695971" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49835527" visible="true" weight="0.20695971" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.20695971" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.37959182" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.47959185" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.315508" />
       <window_info anchor="bottom" id="Java Enterprise" />
@@ -908,59 +912,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArrayTypeAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#496#541#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#968#969#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="66" selection-start-line="25" selection-start-column="66" selection-end-line="25" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2563">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1334#1414#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2106#2107#0" expanded="true" />
-            <element signature="e#7803#7804#0" expanded="true" />
-            <element signature="e#7844#7845#0" expanded="true" />
-            <element signature="e#10462#10463#0" expanded="true" />
-            <element signature="e#10512#10513#0" expanded="true" />
-            <element signature="e#10773#10774#0" expanded="true" />
-            <element signature="e#10823#10824#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -976,6 +931,13 @@
             <element signature="e#771#772#0" expanded="true" />
             <element signature="e#799#800#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/appengine-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -998,10 +960,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/SparseArrayTypeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-129">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#496#541#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#10024#10025#0" expanded="true" />
+            <element signature="e#10058#10059#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="106" column="47" lean-forward="true" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/ParseTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="478" column="47" lean-forward="true" selection-start-line="478" selection-start-column="47" selection-end-line="478" selection-end-column="47" />
+        <state relative-caret-position="145">
+          <caret line="89" column="74" selection-start-line="89" selection-start-column="74" selection-end-line="89" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#259#326#0" expanded="true" />
@@ -1086,30 +1089,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/TreeParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/JSONUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="249" selection-start-line="249" selection-end-line="249" />
+        <state relative-caret-position="145">
+          <caret line="53" column="60" selection-start-line="53" selection-start-column="60" selection-end-line="53" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#10024#10025#0" expanded="true" />
-            <element signature="e#10058#10059#0" expanded="true" />
+            <element signature="e#1334#1414#0" expanded="true" />
+            <element signature="e#2062#2063#0" expanded="true" />
+            <element signature="e#2106#2107#0" expanded="true" />
+            <element signature="e#7803#7804#0" expanded="true" />
+            <element signature="e#7844#7845#0" expanded="true" />
+            <element signature="e#10462#10463#0" expanded="true" />
+            <element signature="e#10512#10513#0" expanded="true" />
+            <element signature="e#10773#10774#0" expanded="true" />
+            <element signature="e#10823#10824#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/nlp/NLPTask.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/adamyi/courseplanner/servlets/GetDependenciesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="106" column="40" lean-forward="true" selection-start-line="106" selection-start-column="40" selection-end-line="106" selection-end-column="40" />
+        <state relative-caret-position="228">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1868#1869#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -18,6 +18,7 @@ public class GetDependenciesServlet extends HttpServlet {
         out.println("Requesting dependencies for class" + request.getParameter("class"));
 
         NLPTask task = new NLPTask("(COMP1927 or COMP1928), or (COMP1538, and SENG1031, or MATH1081)");
+        //NLPTask task = new NLPTask("Pre-requisite: at least 75 mark in COMP1511 or COMP1521, and (COMP1927 or COMP1928), or (COMP1538, and SENG1031, or MATH1081), or enrollment in program 3778");
         task.run();
 
 

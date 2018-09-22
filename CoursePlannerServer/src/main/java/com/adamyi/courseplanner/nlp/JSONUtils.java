@@ -57,17 +57,6 @@ public class JSONUtils {
                     ParseTree.Node node = gson.fromJson(json, ParseTree.Node.class);
                     node.setChildrenIds((HashSet) gson.fromJson(nodeObj.get("mChildrenIds"), new TypeToken<HashSet<Integer>>() {
                     }.getType()));
-                    Set<Object> oldTagSet = (HashSet) gson.fromJson(nodeObj.get("mTagSet"), new TypeToken<HashSet<Object>>() {
-                    }.getType());
-                    Set<Object> newTagSet = new HashSet<>();
-                    for (Object obj : oldTagSet) {
-                        if (obj instanceof Double)
-                            newTagSet.add((int) (double) obj);
-                        else
-                            newTagSet.add(obj);
-                    }
-
-                    node.setTagList(newTagSet);
                     return node;
                 }
             });
